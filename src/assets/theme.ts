@@ -1,7 +1,8 @@
-import { colors, media, font } from "./variables";
+import { colors, mediaMin, mediaMax, font } from "./variables";
 
 export const theme = {
   colors,
-  media,
+  mediaMin,
+  mediaMax,
   font,
 };

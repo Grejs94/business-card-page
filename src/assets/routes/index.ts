@@ -13,7 +13,7 @@ type Route = {
 
 export const mainRoutes: Route[] = [
   {
-    path: "/technologies",
+    path: "/",
     component: ProgramingPage,
     exact: true,
   },

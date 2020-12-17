@@ -1,13 +1,25 @@
-const mediaQ = (size: number): string =>
+const mediaQMin = (size: number): string =>
+  `@media only screen and (min-width: ${size}px)`;
+
+export const mediaMin = {
+  xs: mediaQMin(380),
+  sm: mediaQMin(576),
+  md: mediaQMin(768),
+  lg: mediaQMin(992),
+  xl: mediaQMin(1200),
+  xxl: mediaQMin(1440),
+};
+
+const mediaQMax = (size: number): string =>
   `@media only screen and (max-width: ${size}px)`;
 
-export const media = {
-  xs: mediaQ(380),
-  sm: mediaQ(576),
-  md: mediaQ(768),
-  lg: mediaQ(992),
-  xl: mediaQ(1200),
-  xxl: mediaQ(1440),
+export const mediaMax = {
+  xs: mediaQMax(380),
+  sm: mediaQMax(576),
+  md: mediaQMax(768),
+  lg: mediaQMax(992),
+  xl: mediaQMax(1200),
+  xxl: mediaQMax(1440),
 };
 
 export const colors = {

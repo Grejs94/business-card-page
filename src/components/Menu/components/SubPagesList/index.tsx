@@ -9,22 +9,33 @@ type Props = {};
 const SubPagesList: React.FC<Props> = () => {
   const subpages = [
     {
-      title: "Programowanie",
-      links: ["Technologie", "Projekty", "Doświadczenie", "Ukończone kursy"],
-      to: "/technologies",
+      title: "Frontend",
+      links: ["Tech. stack", "Projekty", "Staż", "Kursy"],
+      to: "/",
     },
-    { title: "Historia zawodowa", to: "/history" },
+    { title: "K. zawodowa", to: "/history" },
     { title: "O mnie", to: "/aboutMe" },
   ];
 
   return (
-    <Styled.SubPagesContainer>
+    <Styled.PagesContainer>
       {subpages.map((page) => (
         <Styled.LinkContainer key={page.title}>
-          <Link to={page.to}>{page.title}</Link>
+          <Styled.LinkParagraph>
+            <Link to={page.to}>{page.title}</Link>
+          </Styled.LinkParagraph>
+          {page.links ? (
+            <Styled.SubLinksContainer>
+              {page.links.map((link) => (
+                <Styled.SublinkParagraph>
+                  <Link to={page.to}>{link}</Link>
+                </Styled.SublinkParagraph>
+              ))}
+            </Styled.SubLinksContainer>
+          ) : null}
         </Styled.LinkContainer>
       ))}
-    </Styled.SubPagesContainer>
+    </Styled.PagesContainer>
   );
 };
 

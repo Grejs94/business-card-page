@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { Avatar as MaterialAvatar } from "@material-ui/core";
 
 export const MenuContainer = styled.div`
+  min-width: 240px;
   justify-content: center;
   text-align: center;
 `;
