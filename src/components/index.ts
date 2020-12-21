@@ -1,3 +1,4 @@
 import Menu from "./Menu/index";
+import Button from "./Button/index";
 
-export { Menu };
+export { Menu, Button };

@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { colors, mediaMin, mediaMax, font } = theme;
+const { mediaMin, mediaMax } = theme;
 
 export const AppWrapper = styled.div`
   margin: 0 auto;
@@ -12,5 +12,8 @@ export const AppWrapper = styled.div`
 
   ${mediaMin.lg} {
     display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
   }
 `;

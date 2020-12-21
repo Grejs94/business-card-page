@@ -27,7 +27,7 @@ const SubPagesList: React.FC<Props> = () => {
           {page.links ? (
             <Styled.SubLinksContainer>
               {page.links.map((link) => (
-                <Styled.SublinkParagraph>
+                <Styled.SublinkParagraph key={link}>
                   <Link to={page.to}>{link}</Link>
                 </Styled.SublinkParagraph>
               ))}

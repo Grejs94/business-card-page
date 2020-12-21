@@ -25,6 +25,7 @@ export const mediaMax = {
 export const colors = {
   black: "black",
   white: "white",
+  grey: "#F1F1F2",
 };
 
 export type FontSize =

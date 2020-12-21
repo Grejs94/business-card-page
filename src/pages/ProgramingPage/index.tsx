@@ -1,9 +1,20 @@
 import React from "react";
 
-import { Menu } from "components";
+import { DotsList, Projects } from "./components";
+
+import * as Styled from "./styles";
 
 const ProgramingPage = () => {
-  return <div>ProgramingPageContent</div>;
+  return (
+    <Styled.Wrapper>
+      <Styled.TechStackSectionContainer>
+        <DotsList />
+      </Styled.TechStackSectionContainer>
+      <Styled.ProjectsSectionContainer>
+        <Projects />
+      </Styled.ProjectsSectionContainer>
+    </Styled.Wrapper>
+  );
 };
 
 export default ProgramingPage;
