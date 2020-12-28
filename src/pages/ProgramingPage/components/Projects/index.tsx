@@ -7,16 +7,15 @@ import { data } from "./dataHelper";
 
 const Projects = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const [modalImage, setModalImage] = useState("");
+  const [modalNumber, setModalNumber] = useState(1);
 
   const handleClick = () => {
     console.log("Click");
   };
 
-  const handleImage = (image: string) => {
+  const handleImage = (number: number) => {
     setModalOpen(true);
-    setModalImage(image);
-    console.log(modalImage);
+    setModalNumber(number);
   };
 
   return (
@@ -29,26 +28,26 @@ const Projects = () => {
             {project.projectDescription}
           </S.ProjectDescription>
           <S.Grid>
-            {project.images.map((image) => (
-              <S.ImageContainer key={image}>
-                <S.Img
-                  onClick={(e) => handleImage(image)}
-                  src={image}
-                  alt={`Project ${project.projectsTitle} image`}
-                />
-              </S.ImageContainer>
-            ))}
+            {project.images.map((image) =>
+              image.show ? (
+                <S.ImageContainer key={image.id}>
+                  <S.Img
+                    onClick={() => handleImage(image.id)}
+                    src={image.img}
+                    alt={`Project ${project.projectsTitle} image`}
+                  />
+                </S.ImageContainer>
+              ) : null
+            )}
           </S.Grid>
-          <S.ButtonContainer>
-            <Button handleClick={handleClick}>Więcej zdjęć</Button>
-          </S.ButtonContainer>
           <S.ButtonContainer>
             <Button handleClick={handleClick}>Link do projektu</Button>
           </S.ButtonContainer>
           <Modal
             modalOpened={modalOpen}
             setModalOpened={setModalOpen}
-            modalImage={modalImage}
+            modalNumber={modalNumber}
+            data={project.images}
           />
         </div>
       ))}

@@ -2,7 +2,48 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { colors } = theme;
+const { colors, mediaMin } = theme;
+
+export const LeftArrowContainer = styled.div`
+  position: absolute;
+  left: 3%;
+  top: 45%;
+  width: 10%;
+  height: 10%;
+  cursor: pointer;
+  opacity: 0.5;
+
+  ${mediaMin.lg} {
+    width: 4%;
+    height: 4%;
+  }
+`;
+
+export const RightArrowContainer = styled.div`
+  position: absolute;
+  right: 3%;
+  top: 45%;
+  width: 10%;
+  height: 10%;
+  cursor: pointer;
+  opacity: 0.5;
+
+  ${mediaMin.lg} {
+    width: 4%;
+    height: 4%;
+  }
+`;
+
+export const RightArrow = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+export const LeftArrow = styled.img`
+  width: 100%;
+  height: auto;
+  transform: rotate(180deg);
+`;
 
 export const BodyWrapper = styled.div`
   top: 50%;
