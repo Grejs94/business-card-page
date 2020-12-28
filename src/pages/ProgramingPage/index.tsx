@@ -1,19 +1,22 @@
 import React from "react";
 
-import { DotsList, Projects } from "./components";
+import { DotsList, Projects, Experience } from "./components";
 
-import * as Styled from "./styles";
+import * as S from "./styles";
 
 const ProgramingPage = () => {
   return (
-    <Styled.Wrapper>
-      <Styled.TechStackSectionContainer>
+    <S.Wrapper>
+      <S.grayContainer>
         <DotsList />
-      </Styled.TechStackSectionContainer>
-      <Styled.ProjectsSectionContainer>
+      </S.grayContainer>
+      <S.lightContainer>
         <Projects />
-      </Styled.ProjectsSectionContainer>
-    </Styled.Wrapper>
+      </S.lightContainer>
+      <S.grayContainer>
+        <Experience />
+      </S.grayContainer>
+    </S.Wrapper>
   );
 };
 

@@ -52,5 +52,9 @@ export const ProjectTitle = styled.p`
 `;
 
 export const ProjectDescription = styled.p`
-  text-align: center;
+  text-align: left;
+
+  ${mediaMin.lg} {
+    text-align: center;
+  }
 `;

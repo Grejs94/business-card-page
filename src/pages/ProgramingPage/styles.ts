@@ -15,9 +15,9 @@ export const RootContainer = styled.div`
   background-color: ${colors.grey};
 `;
 
-export const TechStackSectionContainer = styled(RootContainer)``;
+export const grayContainer = styled(RootContainer)``;
 
-export const ProjectsSectionContainer = styled(RootContainer)`
+export const lightContainer = styled(RootContainer)`
   background-color: ${colors.white};
 `;
 

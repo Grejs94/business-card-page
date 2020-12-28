@@ -10,7 +10,7 @@ const SubPagesList: React.FC<Props> = () => {
   const subpages = [
     {
       title: "Frontend",
-      links: ["Tech. stack", "Projekty", "Staż", "Kursy"],
+      links: ["Tech. stack", "Projekty", "Doświadczenie", "Kursy"],
       to: "/",
     },
     { title: "K. zawodowa", to: "/history" },

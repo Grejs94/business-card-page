@@ -1,15 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 
-import { Button } from "components";
+import { Button, Modal } from "components";
 
 import * as S from "./styles";
 import { data } from "./dataHelper";
 
-type Props = {};
+const Projects = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState("");
 
-const Projects: React.FC<Props> = () => {
   const handleClick = () => {
     console.log("Click");
+  };
+
+  type IhandleImage = {
+    image: string;
+  };
+
+  const handleImage = (image: string) => {
+    setModalOpen(true);
+    setModalImage(image);
+    console.log(modalImage);
   };
 
   return (
@@ -25,6 +36,7 @@ const Projects: React.FC<Props> = () => {
             {project.images.map((image) => (
               <S.ImageContainer key={image}>
                 <S.Img
+                  onClick={(e) => handleImage(image)}
                   src={image}
                   alt={`Project ${project.projectsTitle} image`}
                 />
@@ -37,6 +49,11 @@ const Projects: React.FC<Props> = () => {
           <S.ButtonContainer>
             <Button handleClick={handleClick}>Link do projektu</Button>
           </S.ButtonContainer>
+          <Modal
+            modalOpened={modalOpen}
+            setModalOpened={setModalOpen}
+            modalImage={modalImage}
+          />
         </div>
       ))}
     </>
