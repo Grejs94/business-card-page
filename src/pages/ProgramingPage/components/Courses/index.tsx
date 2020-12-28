@@ -8,7 +8,7 @@ type Props = {};
 const Courses: React.FC<Props> = () => {
   return (
     <div>
-      <Styled.SectionTitle>Kursy</Styled.SectionTitle>
+      <Styled.SectionTitle id="Kursy">Kursy</Styled.SectionTitle>
       {data.map((item) => (
         <div key={item.id}>
           <Styled.CoursesInfo>Autor: {item.author}</Styled.CoursesInfo>

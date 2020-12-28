@@ -12,7 +12,7 @@ type Props = {};
 const Experience: React.FC<Props> = () => {
   return (
     <div>
-      <SectionTitle>Doświadczenie</SectionTitle>
+      <SectionTitle id="Doświadczenie">Doświadczenie</SectionTitle>
       <span>{description}</span>
       <Styled.Grid>
         {images.map((image) => (

@@ -21,7 +21,7 @@ const Projects = () => {
 
   return (
     <>
-      <S.SectionTitle>Projekty</S.SectionTitle>
+      <S.SectionTitle id="Projekty">Projekty</S.SectionTitle>
       {data.map((project) => (
         <div key={project.projectsTitle}>
           <S.ProjectTitle>{project.projectsTitle}</S.ProjectTitle>

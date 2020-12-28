@@ -7,6 +7,8 @@ const { colors, mediaMin, mediaMax, font } = theme;
 export const Wrapper = styled.div`
   ${mediaMin.lg} {
     flex-grow: 1;
+
+    margin-left: 250px;
   }
 `;
 

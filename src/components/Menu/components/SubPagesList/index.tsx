@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "utils";
+import Link from "utils/Link/index";
 
 import * as Styled from "./styles";
 
@@ -10,12 +10,22 @@ const SubPagesList: React.FC<Props> = () => {
   const subpages = [
     {
       title: "Frontend",
-      links: ["Tech. stack", "Projekty", "Doświadczenie", "Kursy"],
+      links: ["TechStack", "Projekty", "Doświadczenie", "Kursy"],
       to: "/",
     },
     { title: "K. zawodowa", to: "/history" },
     { title: "O mnie", to: "/aboutMe" },
   ];
+
+  const handleClick = (section: string) => {
+    setTimeout(() => {
+      const element = document.querySelector(`#${section}`);
+
+      if (!!element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 500);
+  };
 
   return (
     <Styled.PagesContainer>
@@ -28,7 +38,9 @@ const SubPagesList: React.FC<Props> = () => {
             <Styled.SubLinksContainer>
               {page.links.map((link) => (
                 <Styled.SublinkParagraph key={link}>
-                  <Link to={page.to}>{link}</Link>
+                  <Link to={page.to} handleClick={() => handleClick(link)}>
+                    {link}
+                  </Link>
                 </Styled.SublinkParagraph>
               ))}
             </Styled.SubLinksContainer>

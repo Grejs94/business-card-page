@@ -7,7 +7,7 @@ import { SectionTitle } from "pages/ProgramingPage/styles";
 export const DotsList = () => {
   return (
     <>
-      <SectionTitle>Technologie</SectionTitle>
+      <SectionTitle id="TechStack">Technologie</SectionTitle>
       {dotsArray.map((dotsComponent) => (
         <DotsComponent key={dotsComponent.text} dots={dotsComponent.dots}>
           {dotsComponent.text}

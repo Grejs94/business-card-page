@@ -1,7 +1,8 @@
 import React from "react";
 
-import { DotsList, Projects, Experience, Courses } from "./components";
+import { ScrollTop } from "components";
 
+import { DotsList, Projects, Experience, Courses } from "./components";
 import * as S from "./styles";
 
 const ProgramingPage = () => {
@@ -19,6 +20,7 @@ const ProgramingPage = () => {
       <S.lightContainer>
         <Courses />
       </S.lightContainer>
+      <ScrollTop value={400} />
     </S.Wrapper>
   );
 };
