@@ -16,7 +16,7 @@ const Experience: React.FC<Props> = () => {
       <span>{description}</span>
       <Styled.Grid>
         {images.map((image) => (
-          <Styled.ImageContainer>
+          <Styled.ImageContainer key={image}>
             <Styled.Img src={image} alt="Pictures of code-review screenshot" />
           </Styled.ImageContainer>
         ))}

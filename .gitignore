@@ -14,6 +14,9 @@
 # production
 /build
 
+# git commits plan 
+src/notatki 
+
 # misc
 .DS_Store
 .env.local

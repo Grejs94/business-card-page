@@ -13,10 +13,6 @@ const Projects = () => {
     console.log("Click");
   };
 
-  type IhandleImage = {
-    image: string;
-  };
-
   const handleImage = (image: string) => {
     setModalOpen(true);
     setModalImage(image);

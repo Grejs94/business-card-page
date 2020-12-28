@@ -1,6 +1,6 @@
 import React from "react";
 
-import { DotsList, Projects, Experience } from "./components";
+import { DotsList, Projects, Experience, Courses } from "./components";
 
 import * as S from "./styles";
 
@@ -16,6 +16,9 @@ const ProgramingPage = () => {
       <S.grayContainer>
         <Experience />
       </S.grayContainer>
+      <S.lightContainer>
+        <Courses />
+      </S.lightContainer>
     </S.Wrapper>
   );
 };
