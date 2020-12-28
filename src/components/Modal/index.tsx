@@ -25,15 +25,37 @@ const SimpleModal: React.FC<Props> = ({
   }, [modalNumber]);
 
   const incresePhoto = () => {
-    if (photoid === data.length) return;
+    if (photoid === data.length) {
+      setPhotoId(1);
+      return;
+    }
 
     setPhotoId(photoid + 1);
   };
 
   const decresePhoto = () => {
-    if (photoid === 1) return;
+    if (photoid === 1) {
+      setPhotoId(data.length);
+      return;
+    }
 
     setPhotoId(photoid - 1);
+  };
+
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.type === "keydown") {
+      if (event.code === "ArrowRight") {
+        console.log("prawo");
+        incresePhoto();
+      }
+      if (event.code === "ArrowLeft") {
+        console.log("lewo");
+        decresePhoto();
+      }
+      // console.log(event);
+      // console.log(photoid);
+    }
+    return;
   };
 
   const generatePhoto = () =>
@@ -44,7 +66,7 @@ const SimpleModal: React.FC<Props> = ({
   };
 
   const body = (
-    <Styled.BodyWrapper>
+    <Styled.BodyWrapper onKeyDown={handleKeyPress}>
       <Styled.CloseIcon onClick={handleClose}>&times;</Styled.CloseIcon>
       <Styled.RightArrowContainer>
         <Styled.RightArrow src={Right_arrow} onClick={incresePhoto} />
