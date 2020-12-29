@@ -17,6 +17,8 @@
 # git commits plan 
 src/notatki 
 
+.eslintcache
+
 # misc
 .DS_Store
 .env.local
