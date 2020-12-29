@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { colors, mediaMin, mediaMax, font } = theme;
+const { mediaMin } = theme;
 
 export { SectionTitle } from "pages/ProgramingPage/styles";
 

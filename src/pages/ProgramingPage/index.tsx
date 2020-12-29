@@ -8,18 +8,18 @@ import * as S from "./styles";
 const ProgramingPage = () => {
   return (
     <S.Wrapper>
-      <S.grayContainer>
+      <S.GrayContainer>
         <DotsList />
-      </S.grayContainer>
-      <S.lightContainer>
+      </S.GrayContainer>
+      <S.LightContainer>
         <Projects />
-      </S.lightContainer>
-      <S.grayContainer>
+      </S.LightContainer>
+      <S.GrayContainer>
         <Experience />
-      </S.grayContainer>
-      <S.lightContainer>
+      </S.GrayContainer>
+      <S.LightContainer>
         <Courses />
-      </S.lightContainer>
+      </S.LightContainer>
       <ScrollTop value={400} />
     </S.Wrapper>
   );

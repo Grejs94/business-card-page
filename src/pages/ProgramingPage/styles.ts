@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { colors, mediaMin, mediaMax, font } = theme;
+const { colors, mediaMin } = theme;
 
 export const Wrapper = styled.div`
   ${mediaMin.lg} {
@@ -17,9 +17,9 @@ export const RootContainer = styled.div`
   background-color: ${colors.grey};
 `;
 
-export const grayContainer = styled(RootContainer)``;
+export const GrayContainer = styled(RootContainer)``;
 
-export const lightContainer = styled(RootContainer)`
+export const LightContainer = styled(RootContainer)`
   background-color: ${colors.white};
 `;
 

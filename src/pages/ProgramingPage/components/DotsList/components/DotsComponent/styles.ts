@@ -4,7 +4,7 @@ import { theme } from "assets/theme";
 
 import { DotsContainerProps } from "../../../../interfaces";
 
-const { colors, mediaMin, mediaMax, font } = theme;
+const { mediaMin } = theme;
 
 export const IconsContainer = styled.div`
   margin-top: 30px;

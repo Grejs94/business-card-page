@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { colors, mediaMin, mediaMax, font } = theme;
+const { mediaMin, font } = theme;
 
 export const LinkContainer = styled.div`
   flex: 1 1 0px;

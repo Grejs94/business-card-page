@@ -2,7 +2,6 @@ import React from "react";
 
 import { Scroll_Top } from "pictures";
 import * as Styles from "./styles";
-import { styled } from "@material-ui/core";
 
 const ScrollTop = ({ value }) => {
   const checkpoint = value;
