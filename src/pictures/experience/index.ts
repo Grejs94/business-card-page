@@ -1,0 +1,10 @@
+export { default as Exp_1 } from "./Exp_1.png";
+export { default as Exp_2 } from "./Exp_2.png";
+export { default as Exp_3 } from "./Exp_3.png";
+export { default as Exp_4 } from "./Exp_4.png";
+export { default as Exp_5 } from "./Exp_5.png";
+export { default as Exp_6 } from "./Exp_6.png";
+export { default as Exp_7 } from "./Exp_7.png";
+export { default as Exp_8 } from "./Exp_8.png";
+export { default as Exp_9 } from "./Exp_9.png";
+export { default as Exp_10 } from "./Exp_10.png";

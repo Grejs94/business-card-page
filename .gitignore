@@ -3,6 +3,9 @@
 src/notatki
 /zdjecia
 
+# pictures
+/zdjecia
+
 # dependencies
 /node_modules
 /.pnp
@@ -13,6 +16,11 @@ src/notatki
 
 # production
 /build
+
+# git commits plan 
+src/notatki 
+
+.eslintcache
 
 # misc
 .DS_Store
