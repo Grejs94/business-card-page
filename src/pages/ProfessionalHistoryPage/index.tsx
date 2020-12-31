@@ -55,7 +55,12 @@ const ProfessionalHistoryPage = () => {
         <p>
           W międzyczasie od 2014-01-15 jestem właścielem firmy protonet Gracjan
           Ludyga która wchodzi w skład kilku rodzinnych firm pod wspólnym
-          członem protonet
+          członem protonet. Firma w żaden sposób nie wpływała na mój czas pracy.
+        </p>
+        <p>
+          Poświęcam na nią jedynie kilka godzin w miesiącu w wyjątkowych
+          sytuacjach (wizyty u notariusza w sprawie spółek, umowy kredytowe,
+          podpisywanie ważnych dokumentów firmowych.)
         </p>
       </Styled.SectionWrapper>
       <Styled.SectionWrapper>
@@ -74,8 +79,9 @@ const ProfessionalHistoryPage = () => {
         </p>
         <p>
           od maja 2019 całkowicie poświęciłem sie nauce projektowania stron jak
-          sie później moim upatrzonym kierunkiem stał się frontend developer
+          sie później moim upatrzonym kierunkiem stał się frontend.
         </p>
+        <p>Gorąco zapraszam do współpracy.</p>
       </Styled.SectionWrapper>
     </Styled.Wrapper>
   );

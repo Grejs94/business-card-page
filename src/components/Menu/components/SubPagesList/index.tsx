@@ -14,7 +14,7 @@ const SubPagesList: React.FC<Props> = () => {
       to: "/",
     },
     { title: "K. zawodowa", to: "/history" },
-    { title: "O mnie", to: "/aboutMe" },
+    // { title: "O mnie", to: "/aboutMe" },
   ];
 
   const handleClick = (section: string) => {
