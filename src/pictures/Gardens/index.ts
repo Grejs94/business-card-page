@@ -1,0 +1,9 @@
+export { default as A2 } from "./A2.jpg";
+export { default as A3 } from "./A3.jpg";
+export { default as A4 } from "./A4.jpg";
+export { default as A5 } from "./A5.jpg";
+export { default as B1 } from "./B1.jpg";
+export { default as B2 } from "./B2.jpg";
+export { default as B3 } from "./B3.jpg";
+export { default as B4 } from "./B4.jpg";
+export { default as B5 } from "./B5.jpg";
