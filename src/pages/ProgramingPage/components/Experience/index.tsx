@@ -35,7 +35,7 @@ const Experience: React.FC<Props> = () => {
         )}
       </Styled.Grid>
       <Styled.LinkContainer>
-        Link do Pull-requestów:
+        Link do pull requestów:
         <Styled.Link
           href="https://github.com/pulls?q=is%3Apr+author%3AGrejs94+archived%3Afalse+is%3Aclosed"
           target="_blank"

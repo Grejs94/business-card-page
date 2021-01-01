@@ -2,24 +2,21 @@ import React from "react";
 
 import { ScrollTop } from "components";
 
-import { DotsList, Projects, Experience, Courses } from "./components";
+import { data } from "./dataHelper";
 import * as S from "./styles";
 
 const ProgramingPage = () => {
   return (
     <S.Wrapper>
-      <S.GrayContainer>
-        <DotsList />
-      </S.GrayContainer>
-      <S.LightContainer>
-        <Projects />
-      </S.LightContainer>
-      <S.GrayContainer>
-        <Experience />
-      </S.GrayContainer>
-      <S.LightContainer>
-        <Courses />
-      </S.LightContainer>
+      {data.map((section) => (
+        <section>
+          {section.container === "gray" ? (
+            <S.GrayContainer>{<section.component />}</S.GrayContainer>
+          ) : (
+            <S.LightContainer>{<section.component />}</S.LightContainer>
+          )}
+        </section>
+      ))}
       <ScrollTop value={400} />
     </S.Wrapper>
   );

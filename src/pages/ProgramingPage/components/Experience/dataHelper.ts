@@ -1,7 +1,7 @@
 import * as image from "pictures/experience";
 
 export const description =
-  "Gdy przerobiłem już wszystkie wartościowe kursy i zaczynało mi brakować materiału na którym mógłbym poszerzać swoją wiedzę zdecydowałem się na nawiązanie współpracy z doświadczonym devem aby na bieżąco usuwać moje błędy i maksymalnie zwiększyć jakość mojego kodu aby odpowiadała aktualnym standardom. Współpraca trwała 2 miesiące i polegała na code-review pull-requestów z projektów  gitgub";
+  "Gdy przerobiłem już wszystkie wartościowe kursy i zaczynało mi brakować materiału, na którym mógłbym poszerzać swoją wiedzę, zdecydowałem się na nawiązanie współpracy z doświadczonym front-end developerem, aby na bieżąco usuwać moje błędy i maksymalnie zwiększyć jakość mojego kodu, aby odpowiadała aktualnym standardom. Współpraca trwała 2 miesiące i polegała na code-review pull-requestów z projektów GitHub";
 
 export const images = [
   { img: image.Exp_1, id: 1, show: true },
