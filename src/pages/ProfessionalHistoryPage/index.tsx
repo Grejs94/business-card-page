@@ -8,7 +8,7 @@ const ProfessionalHistoryPage = () => {
   return (
     <Styled.Wrapper>
       {data.map((profession) => (
-        <section>
+        <section key={profession.professionTitle}>
           <Styled.SectionWrapper>
             <Styled.SectionTitle>
               {profession.professionTitle}
@@ -17,7 +17,7 @@ const ProfessionalHistoryPage = () => {
               <Styled.HeroImg src={profession.heroImage} />
             </Styled.ImageWrapper>
             {profession.texts.map((text) => (
-              <p>{text}</p>
+              <p key={text}>{text}</p>
             ))}
           </Styled.SectionWrapper>
         </section>

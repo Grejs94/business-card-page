@@ -9,7 +9,7 @@ const ProgramingPage = () => {
   return (
     <S.Wrapper>
       {data.map((section) => (
-        <section>
+        <section key={section.id}>
           {section.container === "gray" ? (
             <S.GrayContainer>{<section.component />}</S.GrayContainer>
           ) : (

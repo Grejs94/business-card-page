@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { mediaMin, font } = theme;
+const { mediaMin, font, colors } = theme;
 
 export const Wrapper = styled.div`
   ${mediaMin.lg} {
@@ -33,4 +33,10 @@ export const SectionDescription = styled.p`
 
 export const SectionWrapper = styled.div`
   margin-bottom: 80px;
+`;
+
+export const Link = styled.a`
+  text-decoration: "none";
+  margin-left: 10px;
+  color: ${colors.black};
 `;

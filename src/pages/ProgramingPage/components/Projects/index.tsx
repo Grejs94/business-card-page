@@ -1,19 +1,20 @@
 import React, { useState } from "react";
+import GitHubIcon from "@material-ui/icons/GitHub";
+import WebIcon from "@material-ui/icons/Web";
 
-import { Button, Modal } from "components";
+import { Modal } from "components";
 
 import * as S from "./styles";
 import { data } from "./dataHelper";
 
 const Projects = () => {
+  const [images, setImages] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const [modalNumber, setModalNumber] = useState(1);
 
-  const handleClick = () => {
-    console.log("Click");
-  };
+  const handleImage = (number: number, photos: any) => {
+    setImages(photos);
 
-  const handleImage = (number: number) => {
     setModalOpen(true);
     setModalNumber(number);
   };
@@ -22,17 +23,17 @@ const Projects = () => {
     <>
       <S.SectionTitle id="Projekty">Projekty</S.SectionTitle>
       {data.map((project) => (
-        <div key={project.projectsTitle}>
+        <S.ProjectContainer key={project.projectsTitle}>
           <S.ProjectTitle>{project.projectsTitle}</S.ProjectTitle>
-          <S.ProjectDescription>
-            {project.projectDescription}
-          </S.ProjectDescription>
+          {project.projectDescription.map((text) => (
+            <S.ProjectDescription key={text}>{text}</S.ProjectDescription>
+          ))}
           <S.Grid>
             {project.images.map((image) =>
               image.show ? (
                 <S.ImageContainer key={image.id}>
                   <S.Img
-                    onClick={() => handleImage(image.id)}
+                    onClick={() => handleImage(image.id, project.images)}
                     src={image.img}
                     alt={`Project ${project.projectsTitle} image`}
                   />
@@ -40,17 +41,29 @@ const Projects = () => {
               ) : null
             )}
           </S.Grid>
-          <S.ButtonContainer>
-            <Button handleClick={handleClick}>Link do projektu</Button>
-          </S.ButtonContainer>
-          <Modal
-            modalOpened={modalOpen}
-            setModalOpened={setModalOpen}
-            modalNumber={modalNumber}
-            data={project.images}
-          />
-        </div>
+          <S.LinkContainer>
+            Link do kodu projektu:
+            <S.Link href={project.link} target="_blank">
+              <GitHubIcon />
+            </S.Link>
+          </S.LinkContainer>
+          {project.weblink ? (
+            <S.LinkContainer>
+              Link do kodu strony:
+              <S.Link href={project.weblink} target="_blank">
+                <WebIcon />
+              </S.Link>
+            </S.LinkContainer>
+          ) : null}
+        </S.ProjectContainer>
       ))}
+      <Modal
+        modalOpened={modalOpen}
+        setModalOpened={setModalOpen}
+        modalNumber={modalNumber}
+        setModalNumber={setModalNumber}
+        data={images}
+      />
     </>
   );
 };

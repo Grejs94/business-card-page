@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 
 import { theme } from "assets/theme";
 
-const { mediaMin } = theme;
+const { mediaMin, colors } = theme;
 
 export { SectionTitle } from "pages/ProgramingPage/styles";
 
@@ -41,10 +41,8 @@ export const Img = styled.img`
   cursor: pointer;
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+export const ProjectContainer = styled.div`
+  margin-bottom: 80px;
 `;
 
 export const ProjectTitle = styled.p`
@@ -54,8 +52,14 @@ export const ProjectTitle = styled.p`
 
 export const ProjectDescription = styled.p`
   text-align: left;
+`;
 
-  ${mediaMin.lg} {
-    text-align: center;
-  }
+export const Link = styled.a`
+  text-decoration: "none";
+  margin-left: 10px;
+  color: ${colors.black};
+`;
+
+export const LinkContainer = styled.div`
+  margin-top: 20px;
 `;

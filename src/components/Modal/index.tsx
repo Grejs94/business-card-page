@@ -10,6 +10,7 @@ type Props = {
   setModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
   modalNumber: number;
   data?: any;
+  setModalNumber?: React.Dispatch<React.SetStateAction<number>>;
 };
 
 const SimpleModal: React.FC<Props> = ({
@@ -17,12 +18,17 @@ const SimpleModal: React.FC<Props> = ({
   setModalOpened,
   modalNumber,
   data,
+  setModalNumber,
 }) => {
   const [photoid, setPhotoId] = useState(1);
 
   useEffect(() => {
     setPhotoId(modalNumber);
   }, [modalNumber]);
+
+  if (data.length < 1) {
+    return null;
+  }
 
   const incresePhoto = () => {
     if (photoid === data.length) {
@@ -45,15 +51,11 @@ const SimpleModal: React.FC<Props> = ({
   const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
     if (event.type === "keydown") {
       if (event.code === "ArrowRight") {
-        console.log("prawo");
         incresePhoto();
       }
       if (event.code === "ArrowLeft") {
-        console.log("lewo");
         decresePhoto();
       }
-      // console.log(event);
-      // console.log(photoid);
     }
     return;
   };
@@ -63,6 +65,10 @@ const SimpleModal: React.FC<Props> = ({
 
   const handleClose = () => {
     setModalOpened(false);
+    setPhotoId(1);
+    if (setModalNumber) {
+      setModalNumber(1);
+    }
   };
 
   const body = (
