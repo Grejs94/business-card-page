@@ -1,7 +1,5 @@
 import React from "react";
 
-import { intro, text } from "./dataHelper";
-
 import * as Styled from "./styles";
 
 const AboutMePage = () => {
