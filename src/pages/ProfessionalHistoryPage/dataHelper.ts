@@ -35,6 +35,7 @@ export const data = [
       "Gdy zaczynałem ogrody, uczyłem się również projektować strony www, posiadałem kilka płyt, HTML, CSS jeszcze nie był popularny, Flash oraz Joomla była to krótka przygoda.",
       "Gdy wykonywałem jeszcze grille ogrodowe wykonałem stronę używając generatora Wix.",
       "Gorąco zapraszam do współpracy.",
+      "Po zakończeniu grilli całkowicie skupiłem się na nauce programowania. (tj. 07.2019)",
     ],
   },
 ];

@@ -49,7 +49,7 @@ const Projects = () => {
           </S.LinkContainer>
           {project.weblink ? (
             <S.LinkContainer>
-              Link do kodu strony:
+              Link do strony:
               <S.Link href={project.weblink} target="_blank">
                 <WebIcon />
               </S.Link>
