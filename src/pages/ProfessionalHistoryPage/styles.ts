@@ -16,15 +16,20 @@ export const SectionTitle = styled.p`
   font-size: ${font.size.xl};
 `;
 
+export const ImageWrapperContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`;
+
 export const ImageWrapper = styled.div`
-  width: 100%;
-  height: auto;
+  height: 80vh;
+  width: auto;
   margin-top: 20px;
 `;
 
 export const HeroImg = styled.img`
-  width: 100%;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 `;
 
 export const SectionDescription = styled.p`

@@ -13,9 +13,11 @@ const ProfessionalHistoryPage = () => {
             <Styled.SectionTitle>
               {profession.professionTitle}
             </Styled.SectionTitle>
-            <Styled.ImageWrapper>
-              <Styled.HeroImg src={profession.heroImage} />
-            </Styled.ImageWrapper>
+            <Styled.ImageWrapperContainer>
+              <Styled.ImageWrapper>
+                <Styled.HeroImg src={profession.heroImage} />
+              </Styled.ImageWrapper>
+            </Styled.ImageWrapperContainer>
             {profession.texts.map((text) => (
               <p key={text}>{text}</p>
             ))}

@@ -11,3 +11,28 @@ export const dotsArray: IarrayItem[] = [
   { dots: 1, text: "Jest/Enzyme" },
   { dots: 5, text: "Redux RTK" },
 ];
+
+export const additionalSkills = [
+  {
+    skill: "AWS",
+    info: "Skromne doświadczenie w deploymencie aplikacji MERN na ec2.",
+  },
+  {
+    skill: "MongoDB",
+    info:
+      "Teoretyczna wiedza oraz zrozumienie kodu prostych aplikacji które umożliwiają logowanie i tworzenie nowego użytkownika",
+  },
+  {
+    skill: "json-server",
+    info:
+      "dobre zrozumienie oraz praktycznie wykorzystanie przy aplikacji Shopper",
+  },
+  {
+    skill: "mock server swagger",
+    info: "tworzyłem zadanie rekrutacyjne wykorzystujące tą technologię",
+  },
+  {
+    skill: "nierelacyjne bazy danych",
+    info: "umiejetność wizualizacji i planowania tworzenia baz (Shopper)",
+  },
+];
