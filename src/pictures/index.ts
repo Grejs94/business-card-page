@@ -8,3 +8,4 @@ export * from "./Projects/Shopper";
 export * from "./Projects/BooksTS";
 export * from "./Projects/Wallets";
 export * from "./Projects/BasketPage";
+export * from "./Projects/FakeAllegro";
